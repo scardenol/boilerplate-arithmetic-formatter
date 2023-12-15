@@ -1,3 +1,5 @@
+[![Run on Repl.it](https://replit.com/badge/github/scardenol/boilerplate-arithmetic-formatter)](https://replit.com/new/github/scardenol/boilerplate-arithmetic-formatter)
+
 # Source
 This repo is forked from https://github.com/freeCodeCamp/boilerplate-arithmetic-formatter, the original template to develop the freeCodeCamp project.
 

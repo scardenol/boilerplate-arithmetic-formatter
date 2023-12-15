@@ -24,21 +24,21 @@ def arithmetic_arranger(problems, solve=False):
       return "Error: Numbers cannot be more than four digits."
     # Store the length of the longest number
     max_len = max(len1, len2)
-    # Arrange the problem with the specific format:
-    # The first number should be on the first line, right alligned and occupying max_len + 1 space
-    # In the second line we have: the operator on the left, one space, the second number right alligned and occupying max_len space
-    # The third line is a line of dashes occupying max_len + 2 spaces
+    # Arrange the problem with the specific format for each line:
+    # 1. First line: the first number should be right alligned and occupying max_len + 1 space
+    # 2. Second line: the operator on the left, one space, and the second number right alligned and occupying max_len space
+    # 3. Third line: dashes occupying max_len + 2 spaces
     first_line.append(splitted[0].rjust(max_len + 2))
     second_line.append(splitted[1] + ' ' + splitted[2].rjust(max_len))
     third_line.append('-' * (max_len + 2))
-    # If the problem should be solved add a new line with the solution right alligned and occupying max_len + 2 spaces
+    # If the problem should be solved add a fourth line with the solution right alligned and occupying max_len + 2 spaces
     if solve: fourth_line.append(str(eval(problem)).rjust(max_len + 2))
 
   # Join every list with 4 spaces between each element
-  first_line = '    '.join(first_line)
-  second_line = '    '.join(second_line)
-  third_line = '    '.join(third_line)
-  if solve: fourth_line = '    '.join(fourth_line)
+  first_line = 4*' '.join(first_line)
+  second_line = 4*' '.join(second_line)
+  third_line = 4*' '.join(third_line)
+  if solve: fourth_line = 4*' '.join(fourth_line)
 
   # Join all the list together with a new line between each one
   arranged_problems = first_line + '\n' + second_line + '\n' + third_line
